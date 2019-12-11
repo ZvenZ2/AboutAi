@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kunstig Intelligens</title>
+    <link rel="stylesheet" href="../felles.css">
+    <link rel="icon" href="../bilder/AI_Logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /*CSS-egenskaper til article 1*/
+        #a1{
+            display: flex;
+            min-height: 120vh;
+            flex-direction: column;
+            align-items: center;
+        }
+        #a1 h1{
+            font-size: 60px;
+            margin-top: 140px;
+            width: 800px;
+        }
+        #a1 p{
+            display: block;
+            width: 70vw;
+            max-width: 800px;
+            font-size: 25px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        #a2{
+            background-color: #141414;
+            padding-bottom: 4vw;
+            padding-top: 2vw;
+        }
+        #a2 div{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #a2 video{
+            width: 100%;
+        }
+        #a2 h1{
+            font-size: 4vw ;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #a3{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            margin-top: 10vw;
+        }
+        /*Quotes om Militær bruk av AI*/
+        #a3 p{
+            font-size: 2vw;
+        }
+        #p1{
+            grid-row: 1/3;
+            grid-column: 1/5;
+        }
+        #p2{
+            grid-row: 3/5;
+            grid-column: 3/5;
+        }
+        #p3{
+            grid-column: 5/9;
+            grid-row: 2/5;
+        }
+        #p4{
+            grid-column: 9/12;
+            grid-row: 1/3;
+        }
+        #p5{
+            grid-column: 9/12;
+            grid-row: 3/4;
+        }
+
+
+        @media(max-width: 900px){
+            #a1 h1{
+            font-size: 50px;
+            width: 100%;
+            }
+            #a1 p{
+                width: 95%;
+            }
+            #a2{
+                border-left-style: solid;
+                border-left-color: #070707;
+            }
+            #a2 div{
+            width: 90%;
+            }
+            #a2 h1{
+                font-size: 6vw;
+            }
+            #a3{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                margin-top: 0;
+                margin-left: 8vw;
+                margin-right: 8vw;
+                margin-top: 8vw;
+            }
+            #a3 p{
+                grid-row: span 1;
+                grid-column: span 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5vw;
+            }
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../Videoer/bakgrunnsvideo1.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <div id="main_og_nav">
+            <nav>
+                <div id="logo_div">
+                    <a href="../index.html"><img src="../bilder/AI_Logo.png" alt="AI" id="logo"></a>
+
+                </div>
+                <div>
+                    <a href="Kjente_folk_tanker.html"><h1>Kjennte<br>Personer</h1></a>
+                </div>
+                <div class="aktiv_side">
+                    <a href="Millitar.html"><h1>Militær<br>Bruk</h1></a>
+                </div>
+                <div>
+                    <a href="sikkerhet.html"><h1>Sikkerhet<br>Med AI</h1></a>
+                </div>
+                <div id="hjem">
+                    <a href="../index.html"><h1>Hjem</h1></a>
+                </div>
+            </nav>
+            <main>
+                <article id="a1">
+                    <h1>Militærets bruk av AI</h1>
+                    <p>Ideen om å bruke kunstig intelligens (AI) i militæret <b>skremmer</b> mange mennesker, spesielt når det gjelder hæren. Den amerikanske hæren opererer vanligvis på bakken, og derfor kan det være ubehagelig nærmere hjemmet for noen mennesker.</p>
+                    <p>"Hvis vi kan mestre AI, så tror jeg det bare vil plassere oss bedre for å sikre at vi beskytter det amerikanske folket."</br>- Mark Esper</p>
+                    <!--kilde = "https://emerj.com/ai-sector-overviews/artificial-intelligence-in-the-us-army/"-->
+                </article>
+
+                <article id="a2">
+                    <h1>Droner med AI i Militæret<br>"Project Maven"</h1>
+                    <div>
+                        <video src="../Videoer/Maven.mp4" controls></video>
+                    </div>
+
+                </article>
+
+                <article id="a3">
+                    <p id="p1">"En tydelig fordel med AI er dens evne til å lære og utvikle seg på måter som vanlig programvare ikke kan"</p>
+                    <!--kilde = "https://www.rand.org/blog/2017/09/artificial-intelligence-and-the-military.html"-->
+                    <p id="p2">"Autonome våpen velger og engasjerer mål uten menneskelig innblanding"</p>
+                    <!--kilde = "https://futureoflife.org/open-letter-autonomous-weapons/?cn-reloaded=1"-->
+                    <p id="p3">"Kunstig intelligens er et raskt voksende felt innen teknologi med potensielt betydeligimplikasjoner for nasjonal sikkerhet."</p>
+                    <!--kilde = "https://fas.org/sgp/crs/natsec/R45178.pdf"-->
+                    <p id="p4">"Kunstig intelligens byr på spennende muligheter for Millitæret, men det er også betydelige begrensninger."</p>
+                    <!--kilde = "https://www.army.gov.au/our-future/blog/emerging-threats-and-opportunities/artificial-intelligence-in-army-part-1-the"-->
+                    <p id="p5">"The Army Is Bringing Artificial Intelligence To Its Armored Vehicles"</p>
+                    <!--kilde = "https://nationalinterest.org/blog/buzz/army-bringing-artificial-intelligence-its-armored-vehicles-95456"-->
+                </article>
+            </main>
+        </div>
+        <footer>
+            <div id="linker_footer">
+                <H1>Hovedkilder:</H1>
+                <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" title="Wikipedia">Wikipedia</a>
+                <a href="https://www.livescience.com/49007-history-of-artificial-intelligence.html" title="LiveScience">LiveScience</a>
+                <a href="https://towardsdatascience.com/history-of-ai-484a86fc16ef" title="History of AI">History of AI</a>
+
+            </div>
+            <div>
+                <h1>Laget av:</h1>
+                <ul>
+                    <li>Vetle Svendsen</li>
+                    <li>Troy</li>
+                </ul>
+    
+            </div>
+                
+    
+    
+        </footer>
+    </div>
+
+    
+</body>
+</html>

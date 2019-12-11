@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kunstig Intelligens</title>
+    <link rel="stylesheet" href="felles.css">
+    <link rel="icon" href="bilder/AI_Logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+
+        /*CSS-egenskaper til article 1*/
+        #a1{
+            display: flex;
+            min-height: 120vh;
+            flex-direction: column;
+            align-items: center;
+        }
+        #a1 h1{
+            font-size: 60px;
+            margin-top: 140px;
+            width: 800px;
+        }
+        #a1 p{
+            display: block;
+            width: 70vw;
+            max-width: 800px;
+            font-size: 25px;
+            margin-top: 20px;
+            font-weight: normal;
+        }
+
+
+        /*CSS-egenskaper til article 2*/
+        #a2{
+            background-image: url("bilder/Earth.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 110vh;
+        }
+
+            /*Div innenfor bildet som brukes til å kunne legge på en gråfarget bakrunnsfarge*/
+        #a2 div{
+            background-color: rgba(0,0,0,0.4);
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+        }
+
+        #a2 .problemstillinger{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3vw;
+        }
+
+        #a2 #prob_1{
+            grid-column: 1/9;
+            grid-row: 2/5;
+        }
+        #a2 #prob_2{
+            grid-column: 3/11;
+            grid-row: 5/8;
+        }
+        #a2 #prob_3{
+            grid-column: 5/13;
+            grid-row: 8/11;
+        }
+
+
+        /*CSS_egenskaper til Aricle 3*/
+        #a3{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            padding-top: 80px;
+            margin-top: 50vh;
+        }
+        .historie{
+            background-color: #141414;
+            grid-column: span 2;
+            border-radius: 15px;
+            padding: 7px;
+        }
+        #a3 h1{
+            border-bottom-style: solid;
+            padding-bottom: 10px;
+            font-weight: normal;
+            font-size: 2vw;
+            height: 6vw;
+        }
+        #a3 div video{
+            width: 100%;
+            border-bottom-right-radius: 15px;
+            border-bottom-left-radius: 15px;
+            border-style: solid;
+            border-color: black;
+            margin-top: 2;
+        }
+        #a3 div div{
+            height: 45vh;
+            overflow-y: scroll;
+            overflow-x: hidden; 
+        }
+        #a3 div div img{
+            width: 80%;
+            margin-top: 1vw;
+            margin-bottom: 1vh;
+        }
+        #a3 div div p{
+            font-size: 1vw;
+        }
+
+
+
+        /*Regigering av Scrollbaren*/
+        #a3 div div::-webkit-scrollbar {
+            width: 1em;
+            background-color: #161616;
+        }
+   
+        #a3 div div::-webkit-scrollbar-track {
+            -webkit-box-shaddow: inset 0 0 6px rgba(0,0,0,0.3);
+            border-radius: 10px;
+            background-color: #161616;
+        }
+   
+        #a3 div div::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            -webkit-box-shaddow: inset 0 0 6px rgba(0,0,0,.3);
+            background-color: #838383;
+        }
+        #alphago_video{
+            width: 100%;
+        }
+
+
+        /*En del kode for å redigere linker inder historien (er en del pga måtte definere nye id-er)*/
+        .vidre_link{
+            grid-column: span 3;
+            margin-top: 3vw;
+        }
+        #sikkerhet{
+            background-image: url("bilder/terminator.jfif");
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 30vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-style: solid;
+            border-color: #1f1f1f;
+
+        }
+        .vidre_link a{
+            border-style: none;
+            font-size: 3vw;
+            font-weight: bold;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 5px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            text-decoration: none;
+            color: white;
+
+        }
+        .vidre_link a h1{
+            border-style: none;
+            font-size: 3vw;
+            font-weight: bold;
+        }
+        #millitar{
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            background-image: url("bilder/army.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            border-style: solid;
+            border-color: #1f1f1f;
+            height: 30vw;
+
+        }
+        #millitar a h1{
+            border-style: none;
+            font-size: 3vw;
+            font-weight: bold;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 5px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            transition-duration: 0.5s;
+        }
+        #sikkerhet a h1{
+            border-style: none;
+            font-size: 3vw;
+            font-weight: bold;
+            background-color: rgba(0,0,0,0.4);
+            border-radius: 5px;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center ;
+            transition-duration: 0.5s;
+        }
+        #millitar a h1:hover{
+            font-size: 3.1vw;
+        }
+        #sikkerhet a h1:hover{
+            font-size: 3.1vw;
+        }
+
+
+        @media(max-width: 900px){
+            #a1 h1{
+            font-size: 50px;
+            width: 100%;
+            }
+            #a1 p{
+                width: 95%;
+            }
+            #a2 .problemstillinger{
+                font-size: 4vw;
+            }
+            #a2 #prob_1{
+                grid-column: 2/12;
+            }
+            #a2 #prob_2{
+                grid-column: 2/12;
+            }
+            #a2 #prob_3{
+                grid-column: 2/12;
+            }
+            #a3{
+            margin-top: 3vw;
+            }
+
+            /*Endring av article 3*/
+            #a3 div{
+            grid-column: span 6;
+            }
+            #a3 h1{
+            font-weight: bold;
+            font-size: 4vw;
+            height: 12vw;
+            }
+
+
+            #a3 div div img{
+                width: 98%;
+                margin-top: 1vw;
+                margin-bottom: 1vh;
+            }
+            #a3 div div p{
+                font-size: 2vw;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="Videoer/bakgrunnsvideo1.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <div id="main_og_nav">
+            <nav>
+                <div id="logo_div">
+                    <a href="index.html"><img src="bilder/AI_Logo.png" alt="AI" id="logo"></a>
+
+                </div>
+                <div>
+                    <a href="Undersider/Kjente_folk_tanker.html"><h1>Kjennte<br>Personer</h1></a>
+                </div>
+                <div>
+                    <a href="Undersider/Millitar.html"><h1>Militær<br>Bruk</h1></a>
+                </div>
+                <div>
+                    <a href="Undersider/sikkerhet.html"><h1>Sikkerhet<br>Med AI</h1></a>
+                </div>
+                <div id="hjem" class="aktiv_side">
+                    <a href="index.html"><h1>Hjem</h1></a>
+                </div>
+            </nav>
+            <main>
+                <article id="a1">
+                    <h1>Kunstelig Intelligens<br>AI</h1>
+                    <p><b>Kunstig intelligens</b> er informasjonsteknologi som justerer sin egen aktivitet og derfor tilsynelatende framstår som intelligent.</p>
+                    <p>En datamaskin som er i stand til å <b>løse oppgaver</b> uten å få instruksjoner fra et menneske på hvordan den skal gjøre det, har en kunstig intelligens.</p>
+                    <!--link = "https://snl.no/kunstig_intelligens"-->
+                </article>
+
+                <!--Problemstillinger-->
+                <article id="a2">
+                    <div>
+                        <!--Problemstilling 1-->
+                        <h1 id="prob_1" class="problemstillinger">Kommer AI til å ta verdenskontroll?</h1>
+
+                        <!--Problemstilling 1-->
+                        <h1 id="prob_2" class="problemstillinger">Hva er konsekvensene av at AI får for mye kontroll?</h1>
+
+
+                        <!--Problemstilling 1-->
+                        <h1 id="prob_3" class="problemstillinger">Hvordan kan AI brukes militært?</h1>
+                    </div>
+                </article>
+
+                <!--Kort Historie Om AI-->
+                <article id="a3">
+                    <div id="tildelig_ai" class="historie">
+                        <h1><b>"The Thinking Machine"</b></br>1960</h1>
+                        <video src="Videoer/Start_AI.mp4" controls poster="Bilder/Thinking_machine_bilde.jpg"></video>
+
+                    </div>
+                    <div class="historie">
+                        <h1><b>Lineær Regresjon</b></h1>
+                        <div>
+                            <p>La oss starte med det mest grunnleggende eksemplet som alerede er sett. Lineær regresjon finner linjen som passer best for en gruppe poeng og plasserer de lineært. Denne metoden oppretter en generell funksjon som kartlegger inngangsverdiene og vil forutsi en utgangsverdi, gitt at du har lært den noen treningsdata for x og y verdier. Denne 200 år gamle teknikken er kjent som veiledet maskinlæring, fordi du trener den med input (x) og output (y) verdier, i mens den prøver å finne ut den generelle funksjonen.</p>
+                            <img src="Bilder/grafikkfelt_lineær.gif" alt="Lineær funksjon">
+                            <p>Det som kommer etter Lineær regresjon er Frank Rosenblatt's Perceptron <b>1959</b>, som tar innspill, x, og multipliseres med vektene deres. Noe som er veldig lik den lineære regresjonsligningen (skråningen ganger input + skjevhet), bortsett fra at du summerer en haug av disse ligningene sammen til en utgang.</p>
+                            <img src="Bilder/Neuroner_1.png" alt="Neuroner">
+                            <p>Selv om vi var i stand til å bygge maskiner som kunne klassifisere menn fra kvinner (en linear kartlegging av 1 eller 0). Teknologi innen kunstelig intelegens tok en stor pause, og området innen kunstelig intelegens gikk inn i en lignende dvale. Minsky, grunnleggeren av MITs AI Lab på 1960-tallet, hevdet at disse forutsetningene, at det bare kan produseres 0 eller 1, ikke hadde noen måte å kartlegge ikke-lineære funksjoner som XOR-kartlegging. Siden verden ikke er lineær, men veldig ikke-lineær, ble dette en vesentlig begrensning, faktisk stoppet forskningen, inntil en klok ph.d.-student innså hvordan backpropagation kombinert med sigmoid-funksjonen kunne redde feltet. Kanskje dette er grunnen til at det tar forskere så lang tid å virkelig forstå bakpropegering?</p>
+                            <img src="Bilder/neuroner_2.gif" alt="Neural Network">
+                            <p>Ph.d.-studenten, Paul Werbos, var først i USA med å foreslå at backpropogation kunne brukes til nevrale nett etter å ha analysert det i dybden i sin doktorgradsavhandling fra 1974. Interessant nok, som med Perceptrons, ble han løst inspirert av arbeid som modellerte menneskesinnet, i dette tilfellet de psykologiske teoriene til Freud som han selv forteller:</br>"I 1968 foreslo jeg at vi på en eller annen måte begrense megden arbeid som gikk fra nevron til nevron... Jeg forklarte de omvendte beregningene ved å bruke en kombinasjon av intuisjon og eksempler og den vanlige kjedestolen, selv om det også var nøyaktig en oversettelse til matematikk for ting som Freud hadde tidligere foreslått i sin teori om psykodynamikk!"</p>
+                            <img src="Bilder/berekninger.gif" alt="Berknng av Nevroner">
+                        </div>
+                        <!--kilde = "https://en.wikipedia.org/wiki/Artificial_intelligence"-->
+                        <!--kilde = "https://www.livescience.com/49007-history-of-artificial-intelligence.html"-->
+                    </div>
+                    <div class="historie">
+                        <h1><b>Dagens Kunstige Intelligens</b></h1>
+                        <div>
+                            <p>Den dagi dag har vi mere kompliserte Kunstelige intellegense, et eksempel er Alpha Go.</p>
+                            <p>AlphaGo er en kunstig intelligens (AI) som er spesialisert for å spille Go, et kinesisk strategisk brettspill, mot menneskelige konkurrenter. AlphaGo er et Google DeepMind-prosjekt.</p>
+                            <p>AlphaGo er det første dataprogrammet som slo en profesjonell menneskelig Go-spiller, den første som beseiret en Go-verdensmester, og er uten tvil den sterkeste Go-spilleren i historien.</p>
+                            <video src="Videoer/AlphaGo.mp4" controls poster="Bilder/alphaGo.jpg" id="alphago_video"></video>
+                        </div>
+                    </div>
+
+
+                    <div class="vidre_link" id="sikkerhet">
+                        <a href="Undersider/sikkerhet.html">
+                        <h1>Hvor sikkert er egentlig<br>bruk av AI?</h1>
+                        </a>
+                    </div>
+
+
+                    <div class="vidre_link" id="millitar">
+                        <a href="Undersider/Millitar.html">
+                        <H1>Hvordan kan AI<br>brukes militært?</H1>
+                        </a>    
+                    </div>
+
+
+
+                </article>
+            </main>
+        </div>
+        <footer>
+            <div id="linker_footer">
+                <H1>Hovedkilder:</H1>
+                <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" title="Wikipedia">Wikipedia</a>
+                <a href="https://www.livescience.com/49007-history-of-artificial-intelligence.html" title="LiveScience">LiveScience</a>
+                <a href="https://towardsdatascience.com/history-of-ai-484a86fc16ef" title="History of AI">History of AI</a>
+
+            </div>
+            <div>
+                <h1>Laget av:</h1>
+                <ul>
+                    <li>Vetle Svendsen</li>
+                    <li>Troy</li>
+                </ul>
+
+            </div>
+            
+
+
+        </footer>
+    </div>
+
+    
+</body>
+</html>

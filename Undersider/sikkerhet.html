@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Kunstig Intelligens</title>
+    <link rel="stylesheet" href="../felles.css">
+    <link rel="icon" href="../bilder/AI_Logo.png">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        /*CSS-egenskaper til article 1*/
+        #a1{
+            display: flex;
+            min-height: 120vh;
+            flex-direction: column;
+            align-items: center;
+        }
+        #a1 h1{
+            font-size: 60px;
+            margin-top: 140px;
+            width: 800px;
+        }
+        #a1 p{
+            display: block;
+            width: 70vw;
+            max-width: 800px;
+            font-size: 25px;
+            margin-top: 20px;
+            font-weight: 500;
+        }
+        #a2{
+            background-color: #141414;
+            padding-bottom: 4vw;
+            padding-top: 2vw;
+        }
+        #a2 div{
+            width: 60%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        #a2 video{
+            width: 100%;
+        }
+        #a2 h1{
+            font-size: 4vw ;
+            width: 90%;
+            margin-right: auto;
+            margin-left: auto;
+        }
+        #a3{
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            margin-top: 10vw;
+        }
+        /*Quotes om Militær bruk av AI*/
+        #a3 p{
+            font-size: 2vw;
+        }
+        #p1{
+            grid-row: 1/3;
+            grid-column: 1/5;
+        }
+        #p2{
+            grid-row: 3/5;
+            grid-column: 2/5;
+        }
+        #p3{
+            grid-column: 5/9;
+            grid-row: 2/5;
+        }
+        #p4{
+            grid-column: 6/12;
+            grid-row: 1/2;
+        }
+        #p5{
+            grid-column: 9/12;
+            grid-row: 3/4;
+        }
+
+
+        @media(max-width: 900px){
+            #a1 h1{
+            font-size: 50px;
+            width: 100%;
+            }
+            #a1 p{
+                width: 95%;
+            }
+            #a2{
+                border-left-style: solid;
+                border-left-color: #070707;
+            }
+            #a2 div{
+            width: 90%;
+            }
+            #a2 h1{
+                font-size: 6vw;
+            }
+            #a3{
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: auto;
+                margin-top: 0;
+                margin-left: 8vw;
+                margin-right: 8vw;
+                margin-top: 8vw;
+            }
+            #a3 p{
+                grid-row: span 1;
+                grid-column: span 1;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 2.5vw;
+            }
+        }
+
+ 
+
+    </style>
+</head>
+<body>
+    <video autoplay muted loop id="myVideo">
+        <source src="../Videoer/bakgrunnsvideo2.mp4" type="video/mp4">
+    </video>
+
+    <div class="content">
+        <div id="main_og_nav">
+            <nav>
+                <div id="logo_div">
+                    <a href="../index.html"><img src="../bilder/AI_Logo.png" alt="AI" id="logo"></a>
+
+                </div>
+                <div>
+                    <a href="Kjente_folk_tanker.html"><h1>Kjennte<br>Personer</h1></a>
+                </div>
+                <div>
+                    <a href="Millitar.html"><h1>Militær<br>Bruk</h1></a>
+                </div>
+                <div class="aktiv_side">
+                    <a href="sikkerhet.html"><h1>Sikkerhet<br>Med AI</h1></a>
+                </div>
+                <div id="hjem">
+                    <a href="../index.html"><h1>Hjem</h1></a>
+                </div>
+            </nav>
+            <main>
+                <article id="a1">
+                    <h1>Sikkerhet med AI</h1>
+                    <p>AI er programmert til å gjøre noe gunstig, men det kan utvikles en destruktiv metode for å oppnå målet sitt.</p>
+                    <p>Hvis en AI blir kompleks nok, så kan AI sammenliknes men forrholdet mellom mennesker og maur.</br>Hvis vi mennesker bygger en vei fra ett sted til et annet, og så støtter på en maurtue. Da velger vi ikke å bygge rundt maurtuen for å oppnå målet, men vi bygger igjennom.</br>Og likt er med med en AI, hvis en AI setter seg et mål, og menneskeheten står som ett hinder for at AI'en skal kinne oppnå målet sitt, så bryr ikke AI'en seg om å måtte utrydde mennesket for å oppnå målet sitt.</p>
+                    <!--kilde = "https://futureoflife.org/background/benefits-risks-of-artificial-intelligence/"-->
+                </article>
+
+                <article id="a2">
+                    <h1>Problemer med AI<br>"The Black Box problem"</h1>
+                    <div>
+                        <video src="../Videoer/black_box.mp4" controls></video>
+                    </div>
+
+                </article>
+
+                <article id="a3">
+                    <p id="p1">"Rask fremgang i maskinlæring og kunstig intelligens har gitt økende oppmerksomhet til potensielle konsekvenser av AI-teknologier på samfunnet."</p>
+                    <!--kilde = "Rask fremgang i maskinlæring og kunstig intelligens (AI) har gitt økende oppmerksomhet til potensielle konsekvenser av AI-teknologier på samfunnet."-->
+                    <p id="p2">"Ingen vet egentlig hvordan de mest avanserte algoritmene gjør det de gjør."</p>
+                    <!--kilde = "https://ai-and-safety.dnvgl.com/"-->
+                    <p id="p3">"Det vi virkelig trenger å gjøre er å sørge for at livet fortsetter inn i fremtiden. Er først å prøve å forhindre at en negativ omstendighet oppstår, enn å vente på at den skal oppstå, og deretter være reaktiv."</p>
+                    <!--kilde = "https://towardsdatascience.com/ai-safety-9aeb9ca42907"-->
+                    <p id="p4">"Eksistensiell risiko fra kunstig generell intelligens er hypotesen om at betydelig fremgang i kunstig generell intelligens en dag kan føre til menneskelig utryddelse eller en annen uopprettelig global katastrofe."</p>
+                    <!--kilde = "https://www.army.gov.au/our-future/blog/emerging-threats-and-opportunities/artificial-intelligence-in-army-part-1-the"-->
+                    <p id="p5">"Kunstig intelligens er for tiden et av de hotteste temaene der ute, mest av dårlige grunner enn gode."</p>
+                    <!--kilde = "https://towardsdatascience.com/ai-safety-problematic-cases-for-current-algorithms-a4b4f5075a93"-->
+                </article>
+            </main>
+        </div>
+        <footer>
+            <div id="linker_footer">
+                <H1>Hovedkilder:</H1>
+                <a href="https://en.wikipedia.org/wiki/Artificial_intelligence" title="Wikipedia">Wikipedia</a>
+                <a href="https://www.livescience.com/49007-history-of-artificial-intelligence.html" title="LiveScience">LiveScience</a>
+                <a href="https://towardsdatascience.com/history-of-ai-484a86fc16ef" title="History of AI">History of AI</a>
+    
+            </div>
+            <div>
+                <h1>Laget av:</h1>
+                <ul>
+                    <li>Vetle Svendsen</li>
+                    <li>Troy</li>
+                </ul>
+    
+            </div>
+                
+        </footer>
+    </div>
+
+    
+</body>
+</html>
